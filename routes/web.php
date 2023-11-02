@@ -12,6 +12,7 @@ use App\Http\Controllers\PortfolioImageController;
 use App\Http\Controllers\CompanyController;
 use App\Http\Controllers\BrandController;
 use App\Http\Controllers\ItemController;
+use App\Http\Controllers\CategoryController;
 use App\Http\Controllers\POS\SaleController;
 use App\Http\Controllers\POS\POSAuthController;
 use App\Http\Controllers\AdminSaleController;
@@ -96,6 +97,9 @@ Route::prefix('admin')->group(function(){
 
         //brands
         Route::resource('brands',BrandController::class); //CRUD (Create, Read, Update, Delete)
+
+         //categories
+         Route::resource('categories',CategoryController::class);
 
         //items
         Route::resource('items',ItemController::class);
