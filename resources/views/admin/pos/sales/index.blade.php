@@ -12,7 +12,7 @@
     @parent
 @endsection
 
-@section('page-title','Items')
+@section('page-title','Sales')
 
 @section('content') 
 
