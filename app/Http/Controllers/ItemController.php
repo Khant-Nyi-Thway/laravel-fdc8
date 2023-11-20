@@ -21,7 +21,7 @@ class ItemController extends Controller
     {
         $data = Item::select('items.id','brands.brand_name','categories.category_name','items.item_image',
         'items.item_code', 'items.item_name','items.in_hand_qty','items.purchase_price','items.warranty',
-        'cb_users.email as created_by', 'ub_users.email as updated_by','items.created_at','items.updated_at') //left table
+        'cb_users.email as created_by', 'ub_users.email as updated_by','items.created_at','items.updated_at') //left table   // show as email [ 'cb_users.email as created_by | ub_users.email as updated_by ]
 
             ->leftJoin('brands','items.brand_id','brands.id')  //brands table
             ->leftJoin('categories','items.category_id','categories.id') //categories table
